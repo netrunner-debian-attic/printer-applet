@@ -1,0 +1,26 @@
+Source: printer-applet
+Section: kde
+Priority: optional
+Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Uploaders: Fathi Boudra <fabo@debian.org>, Sune Vuorela <sune@debian.org>, Modestas Vainius <modax@debian.org>,
+ George Kiagiadakis <kiagiadakis.george@gmail.com>, José Manuel Santamaría Lema <panfaust@gmail.com>,
+ Eshat Cakar <info@eshat.de>
+Build-Depends: kde-sc-dev-latest (>= 4:4.8.4),
+ cmake, debhelper (>= 7.3.16), pkg-kde-tools (>= 0.12),
+ kdelibs5-dev (>= 4:4.8),
+ python-dev,
+Standards-Version: 3.9.3
+Homepage: http://www.kde.org/
+Vcs-Browser: http://git.debian.org/?p=pkg-kde/kde-sc/printer-applet.git
+Vcs-Git: git://git.debian.org/pkg-kde/kde-sc/printer-applet.git
+
+Package: printer-applet
+Section: utils
+Architecture: all
+Depends: ${python:Depends}, ${misc:Depends}, python-qt4-dbus, python-cups, python-kde4 (>= 4:4.1.82)
+Recommends: hal-cups-utils, system-config-printer-kde
+Description: manages your printing jobs
+ Printer applet lets you easily manage your printing jobs.
+ .
+ This package is part of the KDE SC utilities module.
+

@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+
+dh = --with=python2
+
+include /usr/share/pkg-kde-tools/qt-kde-team/2/debian-qt-kde.mk
+
+override_dh_auto_configure:
+	$(overridden_command) -- -DINSTALL_PRINTER_APPLET:BOOL=TRUE
+
+.PHONY: override_dh_auto_test
+
+override_dh_python2:
+	$(overridden_command) -p printer-applet /usr/share/kde4/apps/printer-applet
